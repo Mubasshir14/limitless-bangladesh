@@ -20,6 +20,7 @@ import Barishal from './components/Division/Barishal.jsx';
 import ContactPage from './components/ContactPage/ContactPage.jsx';
 import ABout from './components/ABout/ABout.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -76,7 +77,8 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <ABout/>
-      }
+      },
+      
     ]
   },
 ]);

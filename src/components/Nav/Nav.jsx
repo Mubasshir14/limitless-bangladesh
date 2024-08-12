@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo/logo1.png';
 import logo1 from '../../assets/logo/E.png';
+import { IoSearch } from "react-icons/io5";
 
 const Nav = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -20,6 +21,12 @@ const Nav = () => {
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/all">All PLaces</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
+            
+            {/* <li>
+  <input type="text" className="border-b-black border-b-2 outline-none bg-transparent rounded px-2 py-1 text-sm w-32" placeholder="Search" />
+</li> */}
+
+            {/* <li><NavLink to='/search'><IoSearch className="text-xl text-black"/></NavLink></li> */}
             <li className="md:hidden">
                 <label className="flex cursor-pointer gap-2">
                     <svg
@@ -54,6 +61,7 @@ const Nav = () => {
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </label>
+                
             </li>
         </>
     );

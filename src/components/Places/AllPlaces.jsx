@@ -56,7 +56,7 @@ const AllPlaces = () => {
                                     <li key={number + 1}>
                                         <button
                                             onClick={() => paginate(number + 1)}
-                                            className={`px-4 py-2 border rounded-lg ${currentPage === number + 1 ? 'bg-blue-500 text-white' : 'bg-white text-blue-500 border-blue-500'} transition-colors duration-300 ease-in-out`}
+                                            className={`px-4 py-2 border rounded-lg ${currentPage === number + 1 ? 'bg-green-900 text-white' : 'bg-white text-green-900 border-green-900'} transition-colors duration-300 ease-in-out`}
                                         >
                                             {number + 1}
                                         </button>
