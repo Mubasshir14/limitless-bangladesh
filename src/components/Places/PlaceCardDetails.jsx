@@ -9,7 +9,7 @@ const PlaceCardDetails = () => {
     useEffect(() => {
         const fetchPlaceDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/place/${id}`);
+                const response = await fetch(`https://limitless-bangladesg-server-1.onrender.com/place/${id}`);
                 const data = await response.json();
                 setPlace(data);
             } catch (error) {

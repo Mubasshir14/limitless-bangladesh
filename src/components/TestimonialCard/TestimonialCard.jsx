@@ -10,7 +10,7 @@ const TestimonialCard = () => {
         const fetchPlaces = async () => {
             setError(null); // Reset error state before fetch
             try {
-                const response = await fetch('http://localhost:5000/review');
+                const response = await fetch('https://limitless-bangladesg-server-1.onrender.com/review');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

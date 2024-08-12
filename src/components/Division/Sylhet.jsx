@@ -10,7 +10,7 @@ const Sylhet = () => {
         const fetchPlaces = async () => {
             setLoading(true);
             try {
-                const response = await fetch('http://localhost:5000/place');
+                const response = await fetch('https://limitless-bangladesg-server-1.onrender.com/place');
                 const data = await response.json();
 
                 // Filter places that belong to Sylhet Division and limit to first 6 places
