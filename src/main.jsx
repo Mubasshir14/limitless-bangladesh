@@ -19,6 +19,7 @@ import Mymensingh from './components/Division/Mymensingh.jsx';
 import Barishal from './components/Division/Barishal.jsx';
 import ContactPage from './components/ContactPage/ContactPage.jsx';
 import ABout from './components/ABout/ABout.jsx';
+import SearchComponent from './components/SearchCom.jsx';
 
 
 const router = createBrowserRouter([
@@ -78,7 +79,10 @@ const router = createBrowserRouter([
         path: '/about',
         element: <ABout/>
       },
-      
+      {
+        path: '/search',
+        element: <SearchComponent/>
+      }
     ]
   },
 ]);

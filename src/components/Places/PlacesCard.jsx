@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PlacesCard = ({ p }) => {
     const { images, location, division, place_name, _id } = p;
     return (
-        <div className=" rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+        <div className=" rounded-md shadow-md border-2 dark:bg-gray-50 dark:text-gray-800">
             <img src={p.images[0]} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2 text-center">

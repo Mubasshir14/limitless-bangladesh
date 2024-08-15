@@ -16,15 +16,41 @@ const Nav = () => {
         setTheme(e.target.checked ? 'luxury' : 'light');
     };
 
+
+//     const text = async (e) => {
+//     e.preventDefault();
+//     const searchText = e.target.text.value;
+
+//     try {
+//         // Fetch data from the API
+//         const response = await fetch('https://limitless-bangladesg-server-1.onrender.com/place');
+//         const data = await response.json();
+
+//         // Compare searchText with data from the API
+//         const matchedPlace = data.find(place => place.name.toLowerCase() === searchText.toLowerCase());
+
+//         if (matchedPlace) {
+//             console.log('Match found:', matchedPlace);
+//             // You can do something with the matchedPlace here
+//         } else {
+//             console.log('No match found');
+//         }
+//     } catch (error) {
+//         console.error('Error fetching data:', error);
+//     }
+// };
+
+
     const navItem = (
         <>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/all">All PLaces</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            
+            <li><NavLink to="/search">Search</NavLink></li>
+
             {/* <li>
-  <input type="text" className="border-b-black border-b-2 outline-none bg-transparent rounded px-2 py-1 text-sm w-32" placeholder="Search" />
-</li> */}
+                <form onSubmit={text}><input type="text" name='text' className="border-b-black border-b-2 outline-none bg-transparent rounded px-2 py-1 text-sm w-32" placeholder="Search" /></form>
+            </li> */}
 
             {/* <li><NavLink to='/search'><IoSearch className="text-xl text-black"/></NavLink></li> */}
             <li className="md:hidden">
@@ -61,7 +87,7 @@ const Nav = () => {
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </label>
-                
+
             </li>
         </>
     );

@@ -38,7 +38,7 @@ const AllPlaces = () => {
 
     return (
         <div>
-            <div className="my-12">
+            <div className="my-12 p-2">
                 <h1 className="text-3xl font-cinzel font-semibold text-center">All Places</h1>
 
                 {loading ? (
