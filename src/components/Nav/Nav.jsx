@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo/logo1.png';
 import logo1 from '../../assets/logo/E.png';
 import { IoSearch } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 
 const Nav = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -17,28 +18,7 @@ const Nav = () => {
     };
 
 
-//     const text = async (e) => {
-//     e.preventDefault();
-//     const searchText = e.target.text.value;
 
-//     try {
-//         // Fetch data from the API
-//         const response = await fetch('https://limitless-bangladesg-server-1.onrender.com/place');
-//         const data = await response.json();
-
-//         // Compare searchText with data from the API
-//         const matchedPlace = data.find(place => place.name.toLowerCase() === searchText.toLowerCase());
-
-//         if (matchedPlace) {
-//             console.log('Match found:', matchedPlace);
-//             // You can do something with the matchedPlace here
-//         } else {
-//             console.log('No match found');
-//         }
-//     } catch (error) {
-//         console.error('Error fetching data:', error);
-//     }
-// };
 
 
     const navItem = (
@@ -46,11 +26,7 @@ const Nav = () => {
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/all">All PLaces</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/search">Search</NavLink></li>
-
-            {/* <li>
-                <form onSubmit={text}><input type="text" name='text' className="border-b-black border-b-2 outline-none bg-transparent rounded px-2 py-1 text-sm w-32" placeholder="Search" /></form>
-            </li> */}
+            <li><NavLink to="/search"><FaSearch className="text-2xl"/></NavLink></li>
 
             {/* <li><NavLink to='/search'><IoSearch className="text-xl text-black"/></NavLink></li> */}
             <li className="md:hidden">

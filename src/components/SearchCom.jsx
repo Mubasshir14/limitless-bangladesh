@@ -6,20 +6,20 @@ const SearchComponent = () => {
 
     const text = async (e) => {
         e.preventDefault();
-        const searchText = e.target.text.value.toLowerCase(); // Convert search text to lowercase
+        const searchText = e.target.text.value.toLowerCase(); 
 
-        // Fetching data from the API
+        
         const response = await fetch('https://limitless-bangladesg-server-1.onrender.com/place');
         const places = await response.json();
 
-        // Filtering data based on similarity with searchText
+       
         const filteredPlaces = places.filter(place =>
-            place.place_name.toLowerCase().includes(searchText) || // Convert place_name to lowercase
-            place.location.toLowerCase().includes(searchText) ||    // Convert location to lowercase
-            place.division.toLowerCase().includes(searchText)       // Convert division to lowercase
+            place.place_name.toLowerCase().includes(searchText) ||
+            place.location.toLowerCase().includes(searchText) ||    
+            place.division.toLowerCase().includes(searchText)       
         );
 
-        // Storing similar items in state
+      
         setSimilarItems(filteredPlaces);
         e.target.reset();
     }
